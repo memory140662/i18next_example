@@ -1,0 +1,53 @@
+<html>
+  <head>
+     <meta http-equiv="Content-Type" content="text/html;charset='utf-8'">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/8.1.0/i18next.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/1.2.0/jquery-i18next.min.js" ></script>
+    <script src='js/i18nextXHRBackend.js'></script>
+    <script src="js/app/main.js" type="text/javascript" language="javascript" charset="utf-8"></script>
+    <script>
+
+      //一開始截入英文語系
+      $(function() {
+            language_change('en');
+        });
+
+      //處發語系檔
+      function change(){
+          var even = $('#myLanguage').val();
+          language_change(even);
+        
+        }
+
+    </script>
+    
+    
+  
+  </head>
+  </head>
+
+  <body>
+
+      <p> please select language: </p>
+      <select id="myLanguage" onchange="change()">
+        <option value="en">English</option>
+        <option value="zw">中文</option>
+      </select>
+
+      <br>
+
+    <ul class="nav">
+      <li><a href="#" data-i18n="nav.home"></a></li>
+      <li><a href="#" data-i18n="nav.page1"></a></li>
+      <li><a href="#" data-i18n="nav.page2"></a></li>
+    </ul>
+
+    <div class="content">
+      <input data-i18n="[placeholder]input.placeholder" />
+    </div>
+
+
+  </body>
+
+</html>
